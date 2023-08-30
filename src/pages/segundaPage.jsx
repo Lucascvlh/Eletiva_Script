@@ -1,8 +1,15 @@
 export default function segundaPage(){
     return(
-        <div className="container">
-            <h1>Trabalhando com números</h1>
-            5 * 5 = {5*5}
+        <div>
+            {generateList(10)}
         </div>
     )
+}
+
+function generateList(vetor){
+    let list = []
+    for(let i = 0; i < vetor; i++){
+        list.push(<p><span>{i}</span></p>)
+    }
+    return list
 }
